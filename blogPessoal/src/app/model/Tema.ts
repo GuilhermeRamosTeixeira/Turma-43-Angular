@@ -1,14 +1,14 @@
 import { PostagemModel } from "./PostagemModel"
 
-export class Tema{
+export class Tema {
 
-	public  id:number
+	public id: number
 
-	public  descricao:string
+	public descricao: string
 
-	public postagem:PostagemModel[]
+	public postagem: PostagemModel[]
 
-	
 
-	
+
+
 }
