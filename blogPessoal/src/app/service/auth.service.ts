@@ -34,6 +34,10 @@ logado(){
   return ok
 }
 
+getByIdUser(id:number): Observable<Usuario>{
+return this.http.get<Usuario>(`https://blogpessoalguilhermeramos.herokuapp.com/usuarios/${id}`)
+}
+
 }
 
 

@@ -14,5 +14,7 @@ export  class Usuario{
 	
 	public  tipo:string
 
-	public postagem:PostagemModel
+	public token:string
+
+	public postagem:PostagemModel[]
 }
