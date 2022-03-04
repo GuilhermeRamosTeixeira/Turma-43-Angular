@@ -1,5 +1,5 @@
 import { Tema } from "./Tema"
-import { UserLogin } from "./UserLogin"
+import { Usuario } from "./Usuario"
 
 export class PostagemModel {
 
@@ -12,7 +12,7 @@ export class PostagemModel {
 
     public  data:Date
 
-    public usuario: UserLogin
+    public usuario: Usuario
 
     public tema:Tema
 

@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
@@ -14,6 +14,8 @@ export class AuthService {
 
     private http: HttpClient
   ) {}
+
+ 
 
 login(UserLogin:UserLogin): Observable<UserLogin> {
 return this.http.post<UserLogin>("https://blogpessoalguilhermeramos.herokuapp.com/usuarios/logar" , UserLogin)
@@ -34,8 +36,8 @@ logado(){
   return ok
 }
 
-getByIdUser(id:number): Observable<Usuario>{
-return this.http.get<Usuario>(`https://blogpessoalguilhermeramos.herokuapp.com/usuarios/${id}`)
+getByIdUser(id: number): Observable<Usuario>{
+return this.http.get<Usuario>(`https://blogpessoalguilhermeramos.herokuapp.com/usuarios/${id}` )
 }
 
 }

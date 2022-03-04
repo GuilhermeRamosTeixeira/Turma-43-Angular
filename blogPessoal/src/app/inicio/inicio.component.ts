@@ -66,12 +66,13 @@ export class InicioComponent implements OnInit {
       alert("Postagem realizada com Sucesso!!!")
       this.postagem = new PostagemModel()
       this.getAllPostagens()
+
     })
 
   }
 
   findByIdUser() {
-    this.authService.getByIdUser(this.idUser).subscribe((resp: Usuario) => {
+    this.authService.getByIdUser( this.idUser ).subscribe((resp: Usuario) => {
       this.user = resp
     })
 
