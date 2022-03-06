@@ -17,6 +17,8 @@ export class AuthService {
 
  
 
+ 
+
 login(UserLogin:UserLogin): Observable<UserLogin> {
 return this.http.post<UserLogin>("https://blogpessoalguilhermeramos.herokuapp.com/usuarios/logar" , UserLogin)
 }
@@ -38,6 +40,8 @@ logado(){
 
 getByIdUser(id: number): Observable<Usuario>{
 return this.http.get<Usuario>(`https://blogpessoalguilhermeramos.herokuapp.com/usuarios/${id}` )
+
+
 }
 
 }
