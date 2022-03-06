@@ -14,7 +14,7 @@ export class PostagemModel {
 
     public usuario: Usuario
 
-    public tema:Tema
+    public tema:Tema[]
 
 }
 

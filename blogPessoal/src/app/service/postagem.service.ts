@@ -19,9 +19,21 @@ export class PostagemService {
   getAllPostagens(): Observable<PostagemModel[]> {
     return this.http.get<PostagemModel[]>("https://blogpessoalguilhermeramos.herokuapp.com/postagens", this.token)
   }
+  
+getByIdPostagem(id:number):Observable<PostagemModel>{
+return this.http.get<PostagemModel>(`https://blogpessoalguilhermeramos.herokuapp.com/postagens/${id}` , this.token)
+}
 
   postPostagem(postagem: PostagemModel): Observable<PostagemModel>{
     return this.http.post<PostagemModel>("https://blogpessoalguilhermeramos.herokuapp.com/postagens", postagem , this.token)
+}
+
+putPostagem(postagem:PostagemModel):Observable<PostagemModel>{
+return this.http.put<PostagemModel>("https://blogpessoalguilhermeramos.herokuapp.com/postagens" , postagem , this.token) 
+}
+
+deletePostagem(id:number){
+  return this.http.delete(`https://blogpessoalguilhermeramos.herokuapp.com/postagens/${id}` , this.token )
 }
 
 }
